@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Screen Overlay Blocker",
+  "version": "1.0",
+  "description": "Blocks part of the screen to hide subtitles",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Toggle Caption Blocker"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
