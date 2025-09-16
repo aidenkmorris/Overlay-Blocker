@@ -177,10 +177,6 @@ document.getElementById("toggle").addEventListener("click", async () => {
                 let difference = newLeft - originalLeft;
                 let newWidth = width - difference;
 
-                // if(newWidth < MIN_WIDTH) {
-                //   newWidth = MIN_WIDTH;
-                // }
-
                 overlay.style.left = `${newLeft}px`;
                 overlay.style.width = `${newWidth}px`;
                 break;
@@ -193,6 +189,11 @@ document.getElementById("toggle").addEventListener("click", async () => {
                 break;
               }
             }
+
+            let width = parseInt(overlay.style.width) || parseInt(window.getComputedStyle(overlay).width);
+            let height = parseInt(overlay.style.height) || parseInt(window.getComputedStyle(overlay).height);
+            if(width < MIN_WIDTH) overlay.style.width = `${MIN_WIDTH}px`;
+            if(height < MIN_HEIGHT) overlay.style.height = `${MIN_HEIGHT}px`;
           }
         });
 
