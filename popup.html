@@ -3,15 +3,32 @@
 <head>
   <style>
     body {
-      font-family: sans-serif;
-      width: 200px;
-      height: 200px;
+      background-color: black;
+      color: white;
+      padding: 40px;
+      font-size: 20px;
+    }
+
+    #title {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 30px;
+      background-color: black;
+      color: white;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
     }
   </style>
 </head>
 <body>
-  <div>Screen Overlay Blocker</div>
-  <button id="toggle">Toggle Overlay</button>
+  <div id="title">Overlay Blocker</div>
+  <button id="toggle">Activate</button>
   <script src="popup.js"></script>
 </body>
 </html>
